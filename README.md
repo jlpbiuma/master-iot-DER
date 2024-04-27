@@ -1,4 +1,4 @@
-# TFM IOT
+# Práctica asignatura - GCP IOT 1
 
 ## Diseño del modelo de dominio de un sistema de agricultura de precisión
 
