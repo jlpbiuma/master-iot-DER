@@ -6,7 +6,7 @@ ENV MYSQL_DATABASE basededatos
 ENV MYSQL_ROOT_PASSWORD contraseña_root
 
 # Copia el script SQL con las definiciones de las tablas al contenedor
-COPY ./sql/init.sql /docker-entrypoint-initdb.d/
+COPY ../sql/init.sql /docker-entrypoint-initdb.d/
 
 # Exponer el puerto por defecto de MySQL
 EXPOSE 3306

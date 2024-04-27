@@ -1,37 +1,40 @@
--- Create tables
 CREATE TABLE Usuario (
     id_usuario INT PRIMARY KEY,
     nombre VARCHAR(50),
-    email VARCHAR(100)
-    -- Otros campos relacionados con el usuario
+    email VARCHAR(100),
+    nombre_usuario VARCHAR(100),
+    password VARCHAR(100)
 );
 
 CREATE TABLE Parcela (
     id_parcela INT PRIMARY KEY,
     nombre VARCHAR(50),
-    ubicacion VARCHAR(100)
-    -- Otros campos relacionados con la parcela
+    ubicacion VARCHAR(100),
+    id_propietario INT,
+    FOREIGN KEY (id_propietario) REFERENCES Usuario(id_usuario)
 );
 
 CREATE TABLE Dispositivo (
     id_dispositivo INT PRIMARY KEY,
     nombre VARCHAR(50),
-    tipo VARCHAR(50)
-    -- Otros campos relacionados con el dispositivo
+    estado VARCHAR(50),
+    direccion_mac VARCHAR(50),
+    direccion_ip VARCHAR(50),
+    localizacion VARCHAR(100)
 );
 
 CREATE TABLE Sensor (
     id_sensor INT PRIMARY KEY,
     nombre VARCHAR(50),
-    tipo VARCHAR(50)
-    -- Otros campos relacionados con el sensor
+    localizacion VARCHAR(100)
 );
 
 
 CREATE TABLE Unidad (
     id_unidad INT PRIMARY KEY,
-    nombre VARCHAR(50),
-    simbolo VARCHAR(10)
+    unidad VARCHAR(10),
+    descripcion VARCHAR(50),
+    escala VARCHAR(10)
     -- Otros campos relacionados con la unidad
 );
 
